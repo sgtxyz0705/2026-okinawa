@@ -212,6 +212,16 @@
     .day > details { margin: 4px 0 18px 89px; border-top: 1px solid var(--line); }
     .day > details > summary { padding: 12px 0; color: var(--accent); font-size: .85rem; font-weight: 750; cursor: pointer; }
     .day-tip { padding: 0 0 4px; color: var(--muted); font-size: .84rem; }
+    .day > details.supply-plan { padding: 0 12px 12px; border: 1px solid oklch(.83 .035 151); border-radius: 12px; background: oklch(.97 .018 151); }
+    .day > details.supply-plan > summary { color: oklch(.36 .095 151); }
+    .supply-order { display: grid; gap: 2px; margin-bottom: 9px; padding: 9px 10px; border-radius: 9px; color: var(--ink); background: oklch(.92 .04 151); font-size: .79rem; }
+    .supply-order strong { color: oklch(.32 .09 151); }
+    .supply-grid { display: grid; gap: 8px; }
+    .supply-place { min-width: 0; padding: 10px; border: 1px solid oklch(.87 .025 151); border-radius: 10px; background: white; }
+    .supply-place h4 { margin: 0; font-size: .84rem; line-height: 1.4; }
+    .supply-place p { margin: 4px 0 0; color: var(--muted); font-size: .76rem; line-height: 1.5; overflow-wrap: anywhere; }
+    .supply-place .actions { margin-top: 7px; }
+    .supply-note { margin: 9px 0 0; color: var(--muted); font-size: .76rem; }
 
     .panel { margin: 20px 0 0; padding: 16px; border-radius: var(--radius); background: var(--surface-blue); }
     .panel h2 { margin: 0 0 12px; font-size: 1.08rem; }
@@ -304,6 +314,7 @@
       .hero { padding-left: 28px; padding-right: 28px; }
       .essentials, main, .info-section, .prep-section, .map-section, .cost-section, .more-section { padding-left: 22px; padding-right: 22px; }
       .day-nav { padding-left: 22px; padding-right: 22px; }
+      .supply-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
     @media print {
       body { background: white; font-size: 12px; }
@@ -406,9 +417,10 @@
           <article class="stop"><div class="time">16:00</div><div class="dot"></div><div class="stop-card"><div class="stop-title-row"><h3>A&amp;W 牧港店休息・用餐</h3><span class="duration">約 60 分</span></div><p>第一段右駕不要趕路；先讓全家吃東西、上洗手間，再上高速公路往名護。</p><div class="actions"><a class="action primary" href="https://maps.google.com/?q=A%26W+Makiminato+Okinawa" target="_blank" rel="noopener"><svg class="icon"><use href="#map"/></svg>A&amp;W 導航</a></div></div></article>
           <article class="stop"><div class="time">18:00</div><div class="dot"></div><div class="stop-card"><div class="stop-title-row"><h3>許田道路休息站</h3><span class="duration">20–30 分</span></div><p>進入名護前再休息一次；孩子若已睡著或車況順暢，可縮短停留但不要勉強疲勞駕駛。</p><div class="actions"><a class="action primary" href="https://maps.google.com/?q=Roadside+Station+Kyoda+Okinawa" target="_blank" rel="noopener"><svg class="icon"><use href="#map"/></svg>休息站導航</a></div></div></article>
           <article class="stop"><div class="time">19:00</div><div class="dot"></div><div class="stop-card"><div class="stop-title-row"><h3>名護超商／超市補給</h3><span class="duration">30 分</span></div><p>補齊飲水、早餐、零食與孩子用品；選飯店附近順路的一間即可，不另外繞遠。</p><div class="actions"><a class="action primary" href="https://maps.google.com/?q=supermarket+near+Hotel+Yugaf+Inn+Okinawa" target="_blank" rel="noopener"><svg class="icon"><use href="#map"/></svg>附近採買</a></div></div></article>
-          <article class="stop lodging"><div class="time">19:45</div><div class="dot"></div><div class="stop-card"><div class="stop-title-row"><h3>入住 Hotel Yugaf Inn Okinawa</h3><span class="duration">第 1／3 晚</span></div><p>10/6–10/9 連住 3 晚；確認停車位置、早餐與退房時間後，以休息為主。</p><div class="tags"><span class="tag green">4 人房＋1 人房</span></div><div class="actions"><a class="action primary" href="https://maps.google.com/?q=Hotel+Yugaf+Inn+Okinawa" target="_blank" rel="noopener"><svg class="icon"><use href="#map"/></svg>飯店導航</a></div></div></article>
+          <article class="stop lodging"><div class="time">19:45</div><div class="dot"></div><div class="stop-card"><div class="stop-title-row"><h3>入住 Hotel Yugaf Inn Okinawa</h3><span class="duration">第 1／3 晚</span></div><p>10/6–10/9 連住 3 晚；確認停車位置、早餐與退房時間後，以休息為主。</p><div class="tags"><span class="tag green">雙床房（3 人入住）</span></div><div class="actions"><a class="action primary" href="https://maps.google.com/?q=Hotel+Yugaf+Inn+Okinawa" target="_blank" rel="noopener"><svg class="icon"><use href="#map"/></svg>飯店導航</a></div></div></article>
         </div>
         <details open><summary>今天不可壓縮的時間</summary><div class="day-tip">先從台南前往高雄小港、完成大呈停車場接駁，搭乘 10:10 的 IT288，並在 14:30 依約到 OTS 臨空豐崎取車。台灣駕照不可直接使用，請攜帶正本與日文譯本；第一天右駕以安全和休息優先。</div></details>
+        <details class="supply-plan" open><summary>回飯店前採買建議</summary><div class="supply-order"><strong>建議順序</strong><span>許田休息站 → MaxValu なご店 → Hotel Yugaf</span></div><div class="supply-grid"><div class="supply-place"><h4>首選｜MaxValu なご店</h4><p>〒905-0011 沖縄県名護市字宮里1592｜第一晚一次補齊飲水、早餐、水果與孩子用品。</p><div class="actions"><a class="action primary" href="https://www.google.com/maps/dir/?api=1&amp;destination=MaxValu+Nago,+1592+Miyazato,+Nago,+Okinawa" target="_blank" rel="noopener"><svg class="icon"><use href="#map"/></svg>直接導航</a></div></div><div class="supply-place"><h4>備用｜Lawson 名護市營球場前店</h4><p>〒905-0011 沖縄県名護市字宮里501｜就在飯店附近，太晚或只缺飲料、早餐時改走這間。</p><div class="actions"><a class="action" href="https://www.google.com/maps/dir/?api=1&amp;destination=Lawson+Nago+Municipal+Baseball+Stadium,+501+Miyazato,+Nago,+Okinawa" target="_blank" rel="noopener"><svg class="icon"><use href="#map"/></svg>備用導航</a></div></div></div><p class="supply-note">先看孩子精神與抵達時間；第一晚以不繞路、快速補齊為優先。</p></details>
       </section>
 
       <section class="day" id="d1" data-date="2026-10-07">
@@ -422,6 +434,7 @@
           <article class="stop lodging"><div class="time">17:00</div><div class="dot"></div><div class="stop-card"><div class="stop-title-row"><h3>返回 Hotel Yugaf Inn Okinawa</h3><span class="duration">第 2／3 晚</span></div><p>北部傍晚易疲勞；不要把晚餐訂得太早。</p><div class="actions"><a class="action primary" href="https://maps.google.com/?q=Hotel+Yugaf+Inn+Okinawa" target="_blank" rel="noopener"><svg class="icon"><use href="#map"/></svg>返回飯店</a></div></div></article>
         </div>
         <details><summary>雨天調整</summary><div class="day-tip">古宇利島遇大雨可縮短，改逛名護鳳梨園或 AEON 名護店；強風時海洋塔屋頂可能關閉。</div></details>
+        <details class="supply-plan" open><summary>回飯店前採買建議</summary><div class="supply-order"><strong>建議順序</strong><span>古宇利島 → AEON 名護店 → Hotel Yugaf</span></div><div class="supply-grid"><div class="supply-place"><h4>首選｜AEON 名護店</h4><p>〒905-0012 沖縄県名護市字名護見取川原4472｜適合買熟食、晚餐、土產與完整日用品。</p><div class="actions"><a class="action primary" href="https://www.google.com/maps/dir/?api=1&amp;destination=AEON+Nago,+4472+Nago,+Nago,+Okinawa" target="_blank" rel="noopener"><svg class="icon"><use href="#map"/></svg>直接導航</a></div></div><div class="supply-place"><h4>備用｜Lawson 名護宮里店</h4><p>〒905-0011 沖縄県名護市宮里1373-2｜孩子累了就不逛大店，只快速補早餐與飲料。</p><div class="actions"><a class="action" href="https://www.google.com/maps/dir/?api=1&amp;destination=Lawson+Nago+Miyazato,+1373-2+Miyazato,+Nago,+Okinawa" target="_blank" rel="noopener"><svg class="icon"><use href="#map"/></svg>備用導航</a></div></div></div><p class="supply-note">若第一晚已買足，今天只補隔日早餐與容易消耗的飲水即可。</p></details>
       </section>
 
       <section class="day" id="d2" data-date="2026-10-08">
@@ -436,6 +449,7 @@
           <article class="stop"><div class="time">18:30</div><div class="dot"></div><div class="stop-card"><div class="stop-title-row"><h3>第三晚洗衣・整理行李</h3><span class="duration">60–90 分</span></div><p>先確認飯店洗衣機位置、所需硬幣與洗劑；洗衣期間同步整理隔日退房行李，泳衣與仍潮濕衣物分開收納。</p><div class="tags"><span class="tag blue">今晚必做</span><span class="tag">準備零錢</span><span class="tag">設完成鬧鐘</span></div></div></article>
         </div>
         <details open><summary>今天的提醒</summary><div class="day-tip">回飯店後先洗衣再整理行李，避免隔天退房前等烘衣。水族館與海灘若有臨時公告，仍以出發當日官方資訊為準。</div></details>
+        <details class="supply-plan" open><summary>回飯店前採買建議</summary><div class="supply-order"><strong>建議順序</strong><span>備瀨／水族館 → San-A V21 もとぶ食品館 → Hotel Yugaf</span></div><div class="supply-grid"><div class="supply-place"><h4>首選｜San-A V21 もとぶ食品館</h4><p>〒905-0213 沖縄県国頭郡本部町字谷茶29-62｜離開本部町前買晚餐熟食、飲料及洗衣等待時的點心。</p><div class="actions"><a class="action primary" href="https://www.google.com/maps/dir/?api=1&amp;destination=San-A+V21+Motobu,+29-62+Tancha,+Motobu,+Okinawa" target="_blank" rel="noopener"><svg class="icon"><use href="#map"/></svg>直接導航</a></div></div><div class="supply-place"><h4>備用｜Lawson 海洋博公園前店</h4><p>〒905-0207 沖縄県国頭郡本部町字備瀬121-1｜離開景區時就能補貨，之後直接回名護洗衣。</p><div class="actions"><a class="action" href="https://www.google.com/maps/dir/?api=1&amp;destination=Lawson+Ocean+Expo+Park,+121-1+Bise,+Motobu,+Okinawa" target="_blank" rel="noopener"><svg class="icon"><use href="#map"/></svg>備用導航</a></div></div></div><p class="supply-note">今晚有洗衣任務，買完就直接回飯店，不再追加其他繞路點。</p></details>
       </section>
 
       <section class="day" id="d3" data-date="2026-10-09">
@@ -448,10 +462,11 @@
           <article class="stop"><div class="time">14:00</div><div class="dot"></div><div class="stop-card"><div class="stop-title-row"><h3>寶可夢中心・1 樓拍照區</h3><span class="duration">60–90 分</span></div><p>先逛 1 樓 Pokémon Center OKINAWA 與「ちゅらピカ廣場」；熱門商品先買，避免傍晚缺貨。</p><div class="tags"><span class="tag blue">1F</span><span class="tag green">通常 10:00–22:00</span></div><div class="actions"><a class="action primary" href="https://shop.pokemon.co.jp/en/shop/pokemoncenter-okinawa/" target="_blank" rel="noopener">店鋪資訊</a></div></div></article>
           <article class="stop"><div class="time">15:20</div><div class="dot"></div><div class="stop-card"><div class="stop-title-row"><h3>三麗鷗・轉蛋・夾娃娃</h3><span class="duration">約 2 小時</span></div><p>集中逛 4 樓 Sanrio、Gachagacha no Mori、Dream Capsule，再依孩子體力安排 Rakuichi Rakuza 夾娃娃；先訂每人的預算與遊戲次數。</p><div class="tags"><span class="tag blue">4F</span><span class="tag">轉蛋</span><span class="tag">夾娃娃</span></div><div class="actions"><a class="action primary" href="https://en.aeonmall.global/mall/okinawarycom/shops-entertainment" target="_blank" rel="noopener">商場店鋪</a><a class="action" href="https://stores.sanrio.co.jp/en/7056100" target="_blank" rel="noopener">Sanrio</a></div></div></article>
           <article class="stop transport"><div class="time">17:30</div><div class="dot"></div><div class="stop-card"><div class="stop-title-row"><h3>離開來客夢 → 飯店附近</h3><span class="duration">約 15 分</span></div><p>離開商場後先去超商補給，再前往 Okinawa Grand Mer Resort 辦理入住。</p></div></article>
-          <article class="stop"><div class="time">17:50</div><div class="dot"></div><div class="stop-card"><div class="stop-title-row"><h3>超商補給</h3><span class="duration">約 20 分</span></div><p>先買飲水、早餐、零食與孩子臨時需要的用品；選飯店附近順路的一間，不另外繞遠。</p><div class="actions"><a class="action primary" href="https://maps.google.com/?q=convenience+store+near+Okinawa+Grand+Mer+Resort" target="_blank" rel="noopener"><svg class="icon"><use href="#map"/></svg>附近超商</a></div></div></article>
-          <article class="stop lodging"><div class="time">18:20</div><div class="dot"></div><div class="stop-card"><div class="stop-title-row"><h3>入住・視情況使用飯店泳池</h3><span class="duration">1 晚</span></div><p>超商補給後再辦理入住；孩子精神好、泳池當日有開放就安排 60–90 分鐘，若已累就直接洗澡、晚餐與休息。</p><div class="tags"><span class="tag green">4 人房＋1 人房</span><span class="tag blue">泳池先確認時段</span></div><div class="actions"><a class="action primary" href="https://maps.google.com/?q=Okinawa+Grand+Mer+Resort" target="_blank" rel="noopener"><svg class="icon"><use href="#map"/></svg>飯店導航</a></div></div></article>
+          <article class="stop"><div class="time">17:50</div><div class="dot"></div><div class="stop-card"><div class="stop-title-row"><h3>FamilyMart 沖繩與儀店補給</h3><span class="duration">約 20 分</span></div><p>先買飲水、早餐、零食與孩子臨時需要的用品，再前往飯店；地址為沖縄県沖縄市与儀3-17-1。</p><div class="actions"><a class="action primary" href="https://www.google.com/maps/dir/?api=1&amp;destination=FamilyMart+Okinawa+Yogi,+3-17-1+Yogi,+Okinawa+City,+Okinawa" target="_blank" rel="noopener"><svg class="icon"><use href="#map"/></svg>超商導航</a></div></div></article>
+          <article class="stop lodging"><div class="time">18:20</div><div class="dot"></div><div class="stop-card"><div class="stop-title-row"><h3>入住・視情況使用飯店泳池</h3><span class="duration">1 晚</span></div><p>超商補給後再辦理入住；孩子精神好、泳池當日有開放就安排 60–90 分鐘，若已累就直接洗澡、晚餐與休息。</p><div class="tags"><span class="tag green">雙床房（3 人入住）</span><span class="tag blue">泳池先確認時段</span></div><div class="actions"><a class="action primary" href="https://maps.google.com/?q=Okinawa+Grand+Mer+Resort" target="_blank" rel="noopener"><svg class="icon"><use href="#map"/></svg>飯店導航</a></div></div></article>
         </div>
         <details open><summary>親子節奏</summary><div class="day-tip">東南植物樂園已取消。午後只安排來客夢與飯店；孩子累了就縮短遊戲區，泳池則依精神、天候與飯店開放狀況決定。</div></details>
+        <details class="supply-plan" open><summary>回飯店前採買建議</summary><div class="supply-order"><strong>建議順序</strong><span>來客夢 2F 食品區 → FamilyMart 沖繩與儀店 → Grand Mer</span></div><div class="supply-grid"><div class="supply-place"><h4>首選｜AEON STYLE Rycom 2F 食品賣場</h4><p>〒901-2306 沖縄県中頭郡北中城村字ライカム1番地｜離開商場前先買水果、熟食與較完整的用品。</p><div class="actions"><a class="action primary" href="https://www.google.com/maps/dir/?api=1&amp;destination=AEON+STYLE+Rycom,+1+Rycom,+Kitanakagusuku,+Okinawa" target="_blank" rel="noopener"><svg class="icon"><use href="#map"/></svg>直接導航</a></div></div><div class="supply-place"><h4>備用｜FamilyMart 沖繩與儀店</h4><p>〒904-2174 沖縄県沖縄市与儀3-17-1｜若商場已買齊可略過；只補飲料或忘記的用品時停靠。</p><div class="actions"><a class="action" href="https://www.google.com/maps/dir/?api=1&amp;destination=FamilyMart+Okinawa+Yogi,+3-17-1+Yogi,+Okinawa+City,+Okinawa" target="_blank" rel="noopener"><svg class="icon"><use href="#map"/></svg>備用導航</a></div></div></div><p class="supply-note">今天最後一站仍保留超商；孩子累時，來客夢只買必要品後就儘快去飯店。</p></details>
       </section>
 
       <section class="day" id="d4" data-date="2026-10-10">
@@ -464,9 +479,10 @@
           <article class="stop"><div class="time">14:15</div><div class="dot"></div><div class="stop-card"><div class="stop-title-row"><h3>安良波海灘</h3><span class="duration">75 分</span></div><p>地圖景點 4B。以散步、玩沙為主；下水依現場開放與海況公告。</p><div class="tags"><span class="tag">地圖 4B</span><span class="tag blue">看當日海況</span></div><div class="actions"><a class="action primary" href="https://maps.google.com/?q=Araha+Beach" target="_blank" rel="noopener"><svg class="icon"><use href="#map"/></svg>導航</a></div></div></article>
           <article class="stop transport"><div class="time">15:40</div><div class="dot"></div><div class="stop-card"><div class="stop-title-row"><h3>海灘 → 美國村</h3><span class="duration">約 10 分</span></div><p>停車場午後可能滿位，跟隨現場導引，不要繞同一區太久。</p></div></article>
           <article class="stop"><div class="time">16:00</div><div class="dot"></div><div class="stop-card"><div class="stop-title-row"><h3>美國村・晚餐・夕陽</h3><span class="duration">3–4 小時</span></div><p>地圖景點 4C。商店營業各自不同；先看海邊夕陽，再吃晚餐與逛街。</p><div class="tags"><span class="tag">地圖 4C</span><span class="tag green">夕陽時段</span></div><div class="actions"><a class="action primary" href="https://maps.google.com/?q=Mihama+American+Village" target="_blank" rel="noopener"><svg class="icon"><use href="#map"/></svg>導航</a></div></div></article>
-          <article class="stop lodging"><div class="time">20:00</div><div class="dot"></div><div class="stop-card"><div class="stop-title-row"><h3>入住 La'gent 飯店 沖繩那霸</h3><span class="duration">第 1／2 晚</span></div><p>從美國村前往那霸約 40–50 分鐘；抵達後確認隔日早餐與停車規則。</p><div class="tags"><span class="tag green">4 人房＋1 人房</span></div><div class="actions"><a class="action primary" href="https://maps.google.com/?q=La%27gent+Hotel+Okinawa+Naha" target="_blank" rel="noopener"><svg class="icon"><use href="#map"/></svg>飯店導航</a></div></div></article>
+          <article class="stop lodging"><div class="time">20:00</div><div class="dot"></div><div class="stop-card"><div class="stop-title-row"><h3>入住 La'gent 飯店 沖繩那霸</h3><span class="duration">第 1／2 晚</span></div><p>從美國村前往那霸約 40–50 分鐘；抵達後確認隔日早餐與停車規則。</p><div class="tags"><span class="tag green">雙床房（3 人入住）</span></div><div class="actions"><a class="action primary" href="https://maps.google.com/?q=La%27gent+Hotel+Okinawa+Naha" target="_blank" rel="noopener"><svg class="icon"><use href="#map"/></svg>飯店導航</a></div></div></article>
         </div>
         <details><summary>今天的提醒</summary><div class="day-tip">玉泉洞不適合推嬰兒車，全程走完再回到地面。若同行者行動不便，先查無障礙替代動線。</div></details>
+        <details class="supply-plan" open><summary>回飯店前採買建議</summary><div class="supply-order"><strong>建議順序</strong><span>美國村 → MaxValu 松山店 → La'gent 飯店</span></div><div class="supply-grid"><div class="supply-place"><h4>首選｜MaxValu 松山店</h4><p>〒900-0032 沖縄県那覇市松山2-22-1｜24 小時營業，入住那霸首晚適合補齊兩天份飲水、早餐與日用品。</p><div class="actions"><a class="action primary" href="https://www.google.com/maps/dir/?api=1&amp;destination=MaxValu+Matsuyama,+2-22-1+Matsuyama,+Naha,+Okinawa" target="_blank" rel="noopener"><svg class="icon"><use href="#map"/></svg>直接導航</a></div></div><div class="supply-place"><h4>備用｜Lawson 那霸松山二丁目店</h4><p>〒900-0032 沖縄県那覇市松山2-1-18｜飯店很近，只買隔日早餐、飲料或遺漏品最省時間。</p><div class="actions"><a class="action" href="https://www.google.com/maps/dir/?api=1&amp;destination=Lawson+Naha+Matsuyama+2-chome,+2-1-18+Matsuyama,+Naha,+Okinawa" target="_blank" rel="noopener"><svg class="icon"><use href="#map"/></svg>備用導航</a></div></div></div><p class="supply-note">美國村離開後直接進那霸採買，避免先進飯店再把車開出去。</p></details>
       </section>
 
       <section class="day" id="d5" data-date="2026-10-11">
@@ -482,6 +498,7 @@
           <article class="stop lodging"><div class="time">21:30</div><div class="dot"></div><div class="stop-card"><div class="stop-title-row"><h3>返回 La'gent・完成打包</h3><span class="duration">第 2／2 晚</span></div><p>整理托運與手提行李，保留明早換洗衣物、護照與還車資料；不要把退稅商品拆封。</p><div class="actions"><a class="action primary" href="https://maps.google.com/?q=La%27gent+Hotel+Okinawa+Naha" target="_blank" rel="noopener"><svg class="icon"><use href="#map"/></svg>返回飯店</a></div></div></article>
         </div>
         <details open><summary>今天不還車</summary><div class="day-tip">OTS 還車改到 10/12 上午。今晚只要把車停妥並完成打包；國際通若人多或孩子累，可縮短停留，保留隔天早起的體力。</div></details>
+        <details class="supply-plan" open><summary>回飯店前採買建議</summary><div class="supply-order"><strong>建議順序</strong><span>國際通 → FamilyMart 那霸松山中央店 → La'gent 飯店</span></div><div class="supply-grid"><div class="supply-place"><h4>首選｜FamilyMart 那霸松山中央店</h4><p>〒900-0032 沖縄県那覇市松山2-9-7｜回飯店途中補明早早餐、飲料與最後遺漏品，停留控制在 10–15 分鐘。</p><div class="actions"><a class="action primary" href="https://www.google.com/maps/dir/?api=1&amp;destination=FamilyMart+Naha+Matsuyama+Chuo,+2-9-7+Matsuyama,+Naha,+Okinawa" target="_blank" rel="noopener"><svg class="icon"><use href="#map"/></svg>直接導航</a></div></div><div class="supply-place"><h4>備用｜MaxValu 松山店</h4><p>〒900-0032 沖縄県那覇市松山2-22-1｜需要較多食品或臨時補買日用品時使用；若行李已滿就直接回飯店。</p><div class="actions"><a class="action" href="https://www.google.com/maps/dir/?api=1&amp;destination=MaxValu+Matsuyama,+2-22-1+Matsuyama,+Naha,+Okinawa" target="_blank" rel="noopener"><svg class="icon"><use href="#map"/></svg>備用導航</a></div></div></div><p class="supply-note">PARCO CITY 與國際通已是主要採買；這一站只補隔天早上確定會用到的物品。</p></details>
       </section>
 
       <section class="day" id="d6" data-date="2026-10-12">
@@ -585,8 +602,7 @@
             <table class="cost-table">
               <thead><tr><th scope="col">房型</th><th scope="col">總價</th><th scope="col">晚數</th><th scope="col">每晚費用</th></tr></thead>
               <tbody>
-                <tr><td>4 人房</td><td>NT$9,875</td><td>3 晚</td><td>NT$3,292</td></tr>
-                <tr><td>1 人房</td><td>NT$5,674</td><td>3 晚</td><td>NT$1,891</td></tr>
+                <tr><td>雙床房（3 人入住）</td><td>NT$15,549</td><td>3 晚</td><td>NT$5,183</td></tr>
               </tbody>
             </table>
           </div>
@@ -598,8 +614,7 @@
             <table class="cost-table">
               <thead><tr><th scope="col">房型</th><th scope="col">每晚費用</th></tr></thead>
               <tbody>
-                <tr><td>4 人房</td><td>NT$3,216</td></tr>
-                <tr><td>1 人房</td><td>NT$1,839</td></tr>
+                <tr><td>雙床房（3 人入住）</td><td>NT$5,055</td></tr>
               </tbody>
             </table>
           </div>
@@ -611,14 +626,13 @@
             <table class="cost-table">
               <thead><tr><th scope="col">房型</th><th scope="col">總價</th><th scope="col">晚數</th><th scope="col">每晚費用</th></tr></thead>
               <tbody>
-                <tr><td>4 人房</td><td>NT$11,530</td><td>2 晚</td><td>NT$5,765</td></tr>
-                <tr><td>1 人房</td><td>NT$6,228</td><td>2 晚</td><td>NT$3,114</td></tr>
+                <tr><td>雙床房（3 人入住）</td><td>NT$17,758</td><td>2 晚</td><td>NT$8,879</td></tr>
               </tbody>
             </table>
           </div>
         </div>
 
-        <div class="currency-note"><svg class="icon" aria-hidden="true"><use href="#info"/></svg><span>住宿合計 NT$38,362，依 6 晚行程推估 Okinawa Grand Mer Resort 住宿 1 晚。</span></div>
+        <div class="currency-note"><svg class="icon" aria-hidden="true"><use href="#info"/></svg><span>住宿房型已更新為雙床房（3 人入住）；合計仍沿用目前紀錄 NT$38,362，若訂房金額有變再更新。</span></div>
       </section>
 
       <section class="cost-group" aria-labelledby="carCostTitle">
